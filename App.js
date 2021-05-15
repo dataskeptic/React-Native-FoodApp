@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableWithoutFeedback, View } from 'react-native';
 
 const App = () => {
   return (
@@ -7,7 +7,8 @@ const App = () => {
       style={{
         flex: 1,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        backgroundColor: "white",
       }}>
       <Text>Hello, world!</Text>
     </View>
