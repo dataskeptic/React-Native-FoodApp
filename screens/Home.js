@@ -8,7 +8,7 @@ const Home = () => {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "white",
+        backgroundColor: "transparent",
       }}>
       <Text>Home</Text>
     </View>
