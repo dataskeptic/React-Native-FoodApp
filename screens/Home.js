@@ -11,7 +11,7 @@ import {
     } from 'react-native';
 import { COLORS, icons, images, SIZES, FONTS } from '../constants';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   
     // Dummy Datas
 
@@ -345,6 +345,15 @@ const Home = () => {
       setSelectedCategory(category)
   }
 
+  function getCategoryNameById(id) {
+    let category = categories.filter(a => a.id == id)
+
+    if (category.length > 0)
+        return category[0].name
+
+    return ""
+    }
+
 
   function renderHeader() {
     return (
@@ -473,10 +482,10 @@ const Home = () => {
         const renderItem = ({ item }) => (
             <TouchableOpacity
                 style={{ marginBottom: SIZES.padding * 2 }}
-                /* onPress={() => navigation.navigate("Restaurant", {
+                onPress={() => navigation.navigate("Restaurant", {
                     item,
                     currentLocation
-                })} */
+                })} 
             >
                 {/* Image */}
                 <View
@@ -540,7 +549,7 @@ const Home = () => {
                             marginLeft: 10
                         }}
                     >
-                        {/* {
+                        { 
                             item.categories.map((categoryId) => {
                                 return (
                                     <View
@@ -552,7 +561,7 @@ const Home = () => {
                                     </View>
                                 )
                             })
-                        }  */}
+                        }  
 
                         {/* Price */}
                         {
